@@ -1,5 +1,5 @@
 # cronometro-html
 
-Aplicativo feito com HTML e CSS
+Aplicativo feito com HTML, CSS e Javascript.
 
-Utilizando Framework JQuery
+Utilizando Framework JQuery.
