@@ -173,3 +173,54 @@
 	opacity: 0;
     }
 } 
+
+
+
+/**
+ * togger
+ */
+
+.iu-cb-status-content {position: relative;box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);width: 75px;height: 40px;border-radius: 50px;margin: 15px;}
+.iu-cb-status-chat[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    position: fixed;
+}
+
+.iu-cb-status-chat-label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    background-image: linear-gradient(to right top, #0066ff, #006bfb, #0070f6, #0075f1, #1279eb);
+    display: block;
+    border-radius: 100px;
+    position: relative;
+}
+
+.iu-cb-status-chat-label:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+.iu-cb-status-chat:checked + .iu-cb-status-chat-label {
+    background-image: linear-gradient(to right top, #04e564, #04e564, #04e564, #04e564, #04e564);
+}
+
+.iu-cb-status-chat:checked + .iu-cb-status-chat-label:after {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+}
+
+.iu-cb-status-chat-label:active:after {
+    width: 55px;
+}
