@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+/**
+ * togger
+ */
+
+.iu-cb-status-content {
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.9) !important;
+    width: 65px;
+    height: 30px;
+    border-radius: 50px;
+    margin: 15px;
+    position: absolute;
+    z-index: 1;
+    display: flex !important;
+}
+.iu-cb-status-chat[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    position: fixed;
+}
+
+.iu-cb-status-chat-label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    background-image: linear-gradient(to right top, #ec1a3e, #ec1a3e, #ec1a3e, #ec1a3e, #ec1a3e);
+    display: block;
+    border-radius: 100px;
+    position: relative;
+}
+
+.iu-cb-status-chat-label:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    width: 26px;
+    height: 26px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+.iu-cb-status-chat:checked + .iu-cb-status-chat-label {
+    background-image: linear-gradient(to right top, #04e564, #04e564, #04e564, #04e564, #04e564);
+}
+
+.iu-cb-status-chat:checked + .iu-cb-status-chat-label:after {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+}
+
+.iu-cb-status-chat-label:active:after {
+    width: 45px;
+}
+.iu-cb-status-chat-info {
+    position: absolute;
+    z-index: 1;
+    color: rgb(189, 189, 189);
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.31);
+    top: 9px;
+    right: -59px;
+    font-size: 17px;
+    font-weight: 100;
+}

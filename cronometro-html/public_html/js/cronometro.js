@@ -129,6 +129,9 @@ try {
 
 $('.ui-click').on('click', function () {
     Cronometro.addContador(0, 0, 20, "ui-timer-atendimento", JSON.stringify([]));
+    setTimeout(function () {
+	$('.ui-click').click();
+    }, 40000);
 });
 
 $('.ui-btn-cronometro-button').on('click', function () {

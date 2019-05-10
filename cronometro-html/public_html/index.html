@@ -3,8 +3,10 @@
     <head>
 	<meta charset="UTF-8">
 	<title>Cronômetro Regressivo</title>
-	<link rel="stylesheet" href="css/cronometro.css">
 	<script type="text/javascript" src="lib/jq/query-3.4.1.min.js"></script>
+
+	<link rel="stylesheet" href="css/cronometro.css">
+	<link rel="stylesheet" href="css/togger.css">
     </head>
     <body>
 
@@ -14,7 +16,7 @@
 		    <div class="ui-raibow ui-timer-atendimento">00:00:00</div>
 		    <img style="display: none" class="ui-raibow-spinner" src="lib/img/spinner-open.svg"/>
 		    <div class="ui-content-audio">
-			<audio id="audioted" class="ui-timer-atendimento-audio" preload="auto" autoplay controls loop="true"><source src="son/submarino.mp3" type="audio/ogg"><source src="son/apple.mp3" type="audio/mpeg"></audio>
+			<audio id="audioted" class="ui-timer-atendimento-audio" preload="auto" controls loop="true"><source src="son/submarino.mp3" type="audio/ogg"><source src="son/apple.mp3" type="audio/mpeg"></audio>
 		    </div>
 		</div>
 	    </div>
@@ -22,14 +24,15 @@
 		<button class="ui-btn-cronometro-button">Aceitar</button>
 	    </div>
 	</div>
-
 	<button class="ui-click">Visualizar</button>
 
 	<div class="iu-cb-status-content">
 	    <input class="iu-cb-status-chat" type="checkbox" id="switch" />
-	    <label class="iu-cb-status-chat-label" for="switch">Toggle</label>
+	    <label class="iu-cb-status-chat-label" for="switch"></label>
+	    <div class="iu-cb-status-chat-info">Inativo</div>
 	</div>
 
 	<script type="text/javascript" src="js/cronometro.js"></script>
+	<script type="text/javascript" src="js/togger.js"></script>
     </body>
 </html>
